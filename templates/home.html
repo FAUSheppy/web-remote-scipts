@@ -1,0 +1,31 @@
+<html>
+<head>
+    {{ header }}
+    <script src="/static/home.js" defer></script>
+</head>
+<body>
+
+    <!-- navbar -->
+    {{ navbar }}
+
+    <!-- Space, vline, picture -->
+    <div class="main-container">
+        
+        <div class=search>
+            <input id="search-field" class=search-field placeholder="Keyword(s) in series title.."></input>
+            <button class="go-button small-button" onclick=searchButton()>Search!</button>
+        </div>
+
+        <div class=suggest>
+            <button class=go-button onclick=suggestButton()>Suggest something!</button>
+            {% for prerenderFilter in prerenderedFilters %}
+                {{ prerenderFilter }}
+            {% endfor %}
+        </div>
+
+    </div>
+
+    <!-- footer -->
+    {{ footer }}
+
+</body>

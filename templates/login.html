@@ -1,0 +1,17 @@
+<html>
+    <head>
+        {{ header }}
+         <link rel="stylesheet" href="/static/login.css">
+    </head>
+    <body>
+        {{ navbar }}
+        <div class="login-container">
+          <form action="" method="post">
+            <input type="text"     placeholder="Username" name="username" value="{{ request.form.username }}">
+            <input type="password" placeholder="Password" name="password" value="{{ request.form.password }}">
+            <input class="login-button" type="submit" value="Login">
+          </form>
+        </div>
+        {{ footer }}
+    </body>
+</html>
